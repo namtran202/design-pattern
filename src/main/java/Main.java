@@ -1,6 +1,7 @@
-import Creational.Builder.Person;
-import Creational.Builder.PersonBuilder;
-import Creational.Builder.PersonBuilderImpl;
+import Structural.Bridge.Circle;
+import Structural.Bridge.GreenCircle;
+import Structural.Bridge.RedCircle;
+import Structural.Bridge.Shape;
 
 public class Main {
 
@@ -19,6 +20,15 @@ public class Main {
 //                .build();
 //        System.out.println(p.toString());
 
+//            Adapter
+//        VietnameseTarget vietnameseTarget = new TranslatorAdapter(new EnglishAdaptee());
+//        vietnameseTarget.send("Xin chào");
+
+//        Bridge
+        Shape redCircle = new Circle(new RedCircle());
+        redCircle.draw();
+        Shape greenCircle = new Circle(new GreenCircle());
+        greenCircle.draw();
 
     }
 
